@@ -18,16 +18,8 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="binarytree_list.cpp">
+    <ClCompile Include="BinarySearchTree.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="list_queue.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
-  </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="list_queue.h">
-      <Filter>头文件</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
