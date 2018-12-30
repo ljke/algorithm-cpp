@@ -119,7 +119,10 @@ void insert_node(tree_root *root, unsigned long data) {
 }
 
 struct tree_node* delete_node(struct tree_root *root, unsigned long data) {
-	struct tree_node *n = root->r, **p = &root->r;
+	struct tree_node *n = root->r, **p = &root->r; //p point to subtree pointer in parent node that need modified after
+	//it is also correct that use 
+	//struct tree_node *p = NULL;
+	//then, p point to parent node
 	struct tree_node *child;
 
 	//find suitable position to insert
@@ -127,7 +130,7 @@ struct tree_node* delete_node(struct tree_root *root, unsigned long data) {
 	{
 		if (data < n->data)
 		{
-			p = &n->left;
+			p = &n->left; //pointer address that may be modified later
 			n = n->left;
 		}
 		else if (data > n->data) {
